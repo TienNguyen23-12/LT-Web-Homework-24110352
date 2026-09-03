@@ -1,0 +1,118 @@
+﻿<%--
+  Created by IntelliJ IDEA.
+  User: Thanh Tien
+  Date: 28/08/2026
+  Time: 8:23 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<html>
+<head>
+    <title>Quản lý danh mục</title>
+</head>
+<body>
+<div class="container mt-4 mb-5">
+    <div class="page-header">
+        <h2>Quản lý danh mục</h2>
+        <p>Nơi bạn có thể quản lý các danh mục của mình</p>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-header">
+            Danh sách danh mục
+        </div>
+        <div class="card-body">
+            <div class="d-flex justify-content-between mb-3">
+                <div class="d-flex align-items-center">
+                    <select class="form-select form-select-sm w-auto me-2" onchange="window.location.href='<c:url value="/admin/categories"/>?size=' + this.value + '&keyword=${keyword}';">
+                        <option value="5" ${currentSize == 5 ? 'selected' : ''}>5</option>
+                        <option value="10" ${currentSize == 10 ? 'selected' : ''}>10</option>
+                        <option value="25" ${currentSize == 25 ? 'selected' : ''}>25</option>
+                        <option value="50" ${currentSize == 50 ? 'selected' : ''}>50</option>
+                    </select>
+                    <span>records per page</span>
+                </div>
+                <form action="<c:url value='/admin/categories'/>" method="get" class="d-flex align-items-center">
+                    <span class="me-2">Search:</span>
+                    <input type="text" name="keyword" value="${keyword}" class="form-control form-control-sm w-auto me-2">
+                    <input type="hidden" name="size" value="${currentSize}">
+                    <button type="submit" class="btn btn-sm btn-primary">Tìm</button>
+                </form>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover align-middle">
+                    <thead>
+                        <tr>
+                            <th style="width: 10%;">STT</th>
+                            <th style="width: 20%;">Mã Danh Mục (ID)</th>
+                            <th style="width: 50%;">Tên Danh Mục</th>
+                            <th style="width: 20%;">Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <c:forEach items="${listCategory}" var="c" varStatus="STT">
+                            <tr>
+                                <td>${STT.index + 1}</td>
+                                <td>${c.categoryId}</td>
+                                <td class="fw-bold">${c.categoryname}</td>
+                                <td>
+                                    <a href="<c:url value='/admin/category/edit?id=${c.categoryId}'/>" class="text-decoration-none text-info">Sửa</a> |
+                                    <a href="<c:url value='/admin/category/delete?id=${c.categoryId}'/>" class="text-decoration-none text-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa danh mục này? Mọi sản phẩm thuộc danh mục này cũng có thể bị ảnh hưởng.');">Xóa</a>
+                                </td>
+                            </tr>
+                        </c:forEach>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="mt-4">
+                <a href="<c:url value='/admin/category/add'/>" class="btn btn-primary mb-3">Thêm danh mục</a>
+                
+                <div class="d-flex justify-content-center align-items-center flex-wrap">
+                    <ul class="pagination mb-0">
+                        <li class="page-item ${currentPage == 0 ? 'disabled' : ''}">
+                            <a class="page-link" href="<c:url value='/admin/categories?page=${currentPage - 1}&size=${currentSize}&keyword=${keyword}'/>">Trang trước</a>
+                        </li>
+                        <c:choose>
+                            <c:when test="${totalPages <= 7}">
+                                <c:forEach begin="0" end="${totalPages - 1}" var="i">
+                                    <li class="page-item ${currentPage == i ? 'active' : ''}">
+                                        <a class="page-link" href="<c:url value='/admin/categories?page=${i}&size=${currentSize}&keyword=${keyword}'/>">${i + 1}</a>
+                                    </li>
+                                </c:forEach>
+                            </c:when>
+                            <c:otherwise>
+                                <li class="page-item ${currentPage == 0 ? 'active' : ''}"><a class="page-link" href="<c:url value='/admin/categories?page=0&size=${currentSize}&keyword=${keyword}'/>">1</a></li>
+                                <c:if test="${currentPage > 2}"><li class="page-item disabled"><span class="page-link">...</span></li></c:if>
+                                <c:set var="startPage" value="${currentPage - 1}" />
+                                <c:set var="endPage" value="${currentPage + 1}" />
+                                <c:if test="${startPage <= 0}"><c:set var="startPage" value="1" /><c:set var="endPage" value="3" /></c:if>
+                                <c:if test="${endPage >= totalPages - 1}"><c:set var="startPage" value="${totalPages - 4}" /><c:set var="endPage" value="${totalPages - 2}" /></c:if>
+                                <c:forEach begin="${startPage}" end="${endPage}" var="i">
+                                    <li class="page-item ${currentPage == i ? 'active' : ''}"><a class="page-link" href="<c:url value='/admin/categories?page=${i}&size=${currentSize}&keyword=${keyword}'/>">${i + 1}</a></li>
+                                </c:forEach>
+                                <c:if test="${currentPage < totalPages - 3}"><li class="page-item disabled"><span class="page-link">...</span></li></c:if>
+                                <li class="page-item ${currentPage == totalPages - 1 ? 'active' : ''}"><a class="page-link" href="<c:url value='/admin/categories?page=${totalPages - 1}&size=${currentSize}&keyword=${keyword}'/>">${totalPages}</a></li>
+                            </c:otherwise>
+                        </c:choose>
+                        <li class="page-item ${currentPage == totalPages - 1 || totalPages == 0 ? 'disabled' : ''}">
+                            <a class="page-link" href="<c:url value='/admin/categories?page=${currentPage + 1}&size=${currentSize}&keyword=${keyword}'/>">Trang sau</a>
+                        </li>
+                    </ul>
+                    
+                    <form class="d-flex align-items-center ms-4" onsubmit="event.preventDefault(); window.location.href='<c:url value="/admin/categories"/>?page=' + (document.getElementById('jumpAdminPage').value - 1) + '&size=${currentSize}&keyword=${keyword}';">
+                        <span class="me-2 fw-semibold text-secondary">Đến trang:</span>
+                        <input type="number" id="jumpAdminPage" min="1" max="${totalPages}" class="form-control text-center shadow-sm" style="width: 70px;" required>
+                        <button type="submit" class="btn btn-secondary ms-2 shadow-sm">Đi</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

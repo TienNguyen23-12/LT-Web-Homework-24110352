@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Specification-Title: SiteMesh Library
+Specification-Version: 3.2.2
+

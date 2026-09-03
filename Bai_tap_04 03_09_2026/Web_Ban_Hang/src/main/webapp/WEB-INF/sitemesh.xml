@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site-mesh>
+    <decorator-prefix></decorator-prefix>
+    <mapping path="/admin/*" decorator="/views/common/admin.jsp"/>
+    <mapping path="/*" decorator="/views/common/web.jsp"/>
+    
+    <mapping path="/views/*" exclude="true"/>
+    <mapping path="/login*" exclude="true"/>
+    <mapping path="/register*" exclude="true"/>
+    <mapping path="/verify-otp*" exclude="true"/>
+    <mapping path="/forgot-password*" exclude="true"/>
+    <mapping path="/reset-password*" exclude="true"/>
+    <mapping path="/image*" exclude="true"/>
+</site-mesh>
