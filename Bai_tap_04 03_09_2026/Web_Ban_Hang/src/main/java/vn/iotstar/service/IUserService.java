@@ -9,4 +9,5 @@ public interface IUserService {
     boolean sendForgotPasswordOtp(String email);
     void resetPassword(String email, String newPassword);
     void updateProfile(User user);
+    User findByEmail(String email);
 }

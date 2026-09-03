@@ -1,4 +1,4 @@
-﻿<%--
+<%--
   Created by IntelliJ IDEA.
   User: Thanh Tien
   Date: 27/08/2026
@@ -35,7 +35,7 @@
             <c:if test="${not empty error}">
                 <div class="alert alert-danger">${error}</div>
             </c:if>
-            <form class="needs-validation" novalidate action="<c:url value='/verify-otp'/>" method="post">
+            <form action="<c:url value='/verify-otp'/>" method="post">
                 <div class="mb-4">
                     <input type="text" name="otp" class="form-control text-center fs-3" required placeholder="XXXXXX" maxlength="6">
                 </div>
@@ -47,20 +47,5 @@
         </div>
     </div>
 </div>
-<script>
-    (function () {
-        'use strict'
-        var forms = document.querySelectorAll('.needs-validation')
-        Array.prototype.slice.call(forms).forEach(function (form) {
-            form.addEventListener('submit', function (event) {
-                if (!form.checkValidity()) {
-                    event.preventDefault()
-                    event.stopPropagation()
-                }
-                form.classList.add('was-validated')
-            }, false)
-        })
-    })()
-</script>
 </body>
 </html>

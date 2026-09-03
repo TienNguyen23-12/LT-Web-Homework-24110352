@@ -1,4 +1,4 @@
-﻿<%--
+<%--
   Created by IntelliJ IDEA.
   User: Thanh Tien
   Date: 27/08/2026
@@ -44,7 +44,7 @@
             <c:if test="${not empty param.message && param.message != 'active_success' && param.message != 'reset_success'}">
                 <div class="alert alert-info">${param.message}</div>
             </c:if>
-            <form class="needs-validation" novalidate action="<c:url value='/login'/>" method="post">
+            <form action="<c:url value='/login'/>" method="post">
                 <div class="mb-3">
                     <label class="form-label">Email</label>
                     <input type="email" name="email" class="form-control" required>
@@ -62,20 +62,5 @@
         </div>
     </div>
 </div>
-<script>
-    (function () {
-        'use strict'
-        var forms = document.querySelectorAll('.needs-validation')
-        Array.prototype.slice.call(forms).forEach(function (form) {
-            form.addEventListener('submit', function (event) {
-                if (!form.checkValidity()) {
-                    event.preventDefault()
-                    event.stopPropagation()
-                }
-                form.classList.add('was-validated')
-            }, false)
-        })
-    })()
-</script>
 </body>
 </html>

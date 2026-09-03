@@ -52,16 +52,16 @@ public class ProductController extends HttpServlet {
             req.setAttribute("totalPages", totalPages);
             req.setAttribute("currentSize", pageSize);
             req.setAttribute("keyword", keyword);
-            req.getRequestDispatcher("/views/admin/product-list.jsp").forward(req, resp);
+            req.getRequestDispatcher("/views/admin/product-list.jsp").include(req, resp);
         } else if (url.contains("/admin/product/add")) {
             req.setAttribute("categories", categoryService.findAll());
-            req.getRequestDispatcher("/views/admin/product-add.jsp").forward(req, resp);
+            req.getRequestDispatcher("/views/admin/product-add.jsp").include(req, resp);
         } else if (url.contains("/admin/product/edit")) {
             int id = Integer.parseInt(req.getParameter("id"));
             Product p = productService.findById(id);
             req.setAttribute("p", p);
             req.setAttribute("categories", categoryService.findAll());
-            req.getRequestDispatcher("/views/admin/product-edit.jsp").forward(req, resp);
+            req.getRequestDispatcher("/views/admin/product-edit.jsp").include(req, resp);
         } else if (url.contains("/admin/product/delete")) {
             try {
                 int id = Integer.parseInt(req.getParameter("id"));

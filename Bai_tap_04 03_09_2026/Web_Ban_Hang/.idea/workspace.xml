@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Web_Ban_Hang:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2ea1f7d5-595c-46e6-af16-03ad69684c99" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/BaseSiteMeshContext$1CharBufferWriter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/BaseSiteMeshContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/DecoratorSelector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/SiteMeshContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/ant/SiteMeshFileSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/ant/SiteMeshTask.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/builder/BaseSiteMeshBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/builder/BaseSiteMeshFilterBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/builder/BaseSiteMeshOfflineBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/builder/SiteMeshFilterBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/builder/SiteMeshOfflineBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/config/ConfigurableSiteMeshFilter$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/config/ConfigurableSiteMeshFilter$CustomConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/config/ConfigurableSiteMeshFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/config/MetaTagBasedDecoratorSelector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/config/ObjectFactory$Default.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/config/ObjectFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/config/PathBasedDecoratorSelector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/config/PathMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/config/RequestAttributeDecoratorSelector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/config/cmdline/ArgParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/config/cmdline/CommandLineLauncher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/config/properties/PropertiesConfigurator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/config/properties/PropertiesFilterConfigurator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/config/properties/PropertiesOfflineConfigurator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/config/properties/PropertiesParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/config/xml/Xml.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/config/xml/XmlConfigurator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/config/xml/XmlFilterConfigurator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/config/xml/XmlOfflineConfigurator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/content/Content.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/content/ContentChunk.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/content/ContentProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/content/ContentProperty.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/content/TreeNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/content/debug/DumpingContentProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/content/memory/InMemoryContent$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/content/memory/InMemoryContent$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/content/memory/InMemoryContent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/content/memory/InMemoryContentChunk.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/content/memory/InMemoryContentProperty.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/content/tagrules/TagBasedContentProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/content/tagrules/TagRuleBundle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/content/tagrules/decorate/DecoratorTagRuleBundle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/content/tagrules/decorate/SiteMeshDecorateRule$Holder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/content/tagrules/decorate/SiteMeshDecorateRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/content/tagrules/decorate/SiteMeshWriteRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/content/tagrules/html/ContentBlockExtractingRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/content/tagrules/html/CoreHtmlTagRuleBundle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/content/tagrules/html/DivExtractingRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/content/tagrules/html/DivExtractingTagRuleBundle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/content/tagrules/html/ExportTagToContentAndMergeBodyAttributesRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/content/tagrules/html/ExportTagToContentRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/content/tagrules/html/FramesetRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/content/tagrules/html/HtmlAttributesRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/content/tagrules/html/MetaTagRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/content/tagrules/html/ParameterExtractingRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/content/tagrules/html/SiteMeshCutCopyRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/content/tagrules/html/Sm2TagRuleBundle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/content/tagrules/html/TagReplaceRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/content/tagrules/html/TitleExtractingRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/content/tagrules/msoffice/MsOfficeTagRuleBundle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/offline/OfflineContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/offline/SiteMeshOffline.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/offline/directory/Directory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/offline/directory/FileSystemDirectory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/offline/directory/InMemoryDirectory$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/offline/directory/InMemoryDirectory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/sitemesh3.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/tagprocessor/BasicBlockRule$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/tagprocessor/BasicBlockRule$DataHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/tagprocessor/BasicBlockRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/tagprocessor/BasicRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/tagprocessor/CharSequenceBuffer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/tagprocessor/CustomTag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/tagprocessor/Lexer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/tagprocessor/State.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/tagprocessor/StateTransitionRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/tagprocessor/Tag$Type.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/tagprocessor/Tag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/tagprocessor/TagProcessor$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/tagprocessor/TagProcessor$Context.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/tagprocessor/TagProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/tagprocessor/TagProcessorContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/tagprocessor/TagRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/tagprocessor/TagTokenizer$CharBufferReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/tagprocessor/TagTokenizer$ReusableToken.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/tagprocessor/TagTokenizer$Token.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/tagprocessor/TagTokenizer$TokenHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/tagprocessor/TagTokenizer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/tagprocessor/util/CharSequenceList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/webapp/SiteMeshFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/webapp/WebAppContext$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/webapp/WebAppContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/webapp/contentfilter/BasicSelector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/webapp/contentfilter/ContainerTweaks$TomcatTweaks.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/webapp/contentfilter/ContainerTweaks$WebLogicTweaks.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/webapp/contentfilter/ContainerTweaks.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/webapp/contentfilter/ContentBufferingFilter$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/webapp/contentfilter/ContentBufferingFilter$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/webapp/contentfilter/ContentBufferingFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/webapp/contentfilter/HttpServletRequestFilterable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/webapp/contentfilter/HttpServletResponseBuffer$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/webapp/contentfilter/HttpServletResponseBuffer$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/webapp/contentfilter/HttpServletResponseBuffer$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/webapp/contentfilter/HttpServletResponseBuffer$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/webapp/contentfilter/HttpServletResponseBuffer$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/webapp/contentfilter/HttpServletResponseBuffer$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/webapp/contentfilter/HttpServletResponseBuffer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/webapp/contentfilter/ResponseMetaData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/webapp/contentfilter/Selector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/webapp/contentfilter/io/Buffer$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/webapp/contentfilter/io/Buffer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/webapp/contentfilter/io/ByteBufferBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/webapp/contentfilter/io/HttpContentType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/webapp/contentfilter/io/RoutablePrintWriter$DestinationFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/webapp/contentfilter/io/RoutablePrintWriter$DummyWriter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/webapp/contentfilter/io/RoutablePrintWriter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/webapp/contentfilter/io/RoutableServletOutputStream$DestinationFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/webapp/contentfilter/io/RoutableServletOutputStream.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/org/sitemesh/webapp/contentfilter/io/TextEncoder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitemesh-3.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitemesh-main.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitemesh.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/iotstar/config/DataSeederListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/iotstar/config/DataSeederListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/iotstar/config/JpaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/iotstar/config/JpaConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/iotstar/config/MySiteMeshFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/iotstar/config/MySiteMeshFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/iotstar/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/iotstar/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/iotstar/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/iotstar/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/iotstar/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/iotstar/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/iotstar/controller/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/iotstar/controller/ProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/iotstar/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/iotstar/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/iotstar/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/iotstar/service/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/iotstar/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/iotstar/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/sitemesh.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/test.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/admin/category-add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/admin/category-add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/admin/category-edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/admin/category-edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/admin/category-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/admin/category-list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/admin/product-add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/admin/product-add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/admin/product-edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/admin/product-edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/admin/product-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/admin/product-list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/auth/forgot-password.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/auth/forgot-password.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/auth/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/auth/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/auth/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/auth/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/auth/reset-password.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/auth/reset-password.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/auth/verify-otp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/auth/verify-otp.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/common/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/common/admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/common/web.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/common/web.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/web/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/web/detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/web/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/web/product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/web/product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/web/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/web/profile.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0005908797857561" />
+      <entry key="S2" value="1.2620333554704706" />
+      <entry key="S5" value="1.887028020171929" />
+      <entry key="S10" value="2.331925044934616" />
+      <entry key="S30" value="2.7465421168288238" />
+      <entry key="S60" value="2.8689789990762216" />
+      <entry key="M2" value="2.9333798214742233" />
+      <entry key="M5" value="2.973088387197758" />
+      <entry key="M10" value="2.991907829471813" />
+      <entry key="M15" value="3.060240361813387" />
+      <entry key="M30" value="4.95442007335007" />
+      <entry key="H1" value="16.878618933370795" />
+      <entry key="H2" value="41.52993132770277" />
+      <entry key="H4" value="67.67288971192592" />
+      <entry key="D1" value="102.8914098425784" />
+      <entry key="W1" value="110.64893988074701" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="2.424172139086318E-168" />
+      <entry key="S30" value="3.802605234715294E-56" />
+      <entry key="S60" value="4.341739169689756E-28" />
+      <entry key="M2" value="4.6542949149780145E-14" />
+      <entry key="M5" value="1.2259275325087276E-5" />
+      <entry key="M10" value="0.008445878328879913" />
+      <entry key="M15" value="0.09451136260868812" />
+      <entry key="M30" value="2.0596858506856743" />
+      <entry key="H1" value="13.175097164715547" />
+      <entry key="H2" value="35.14463111622291" />
+      <entry key="H4" value="57.9393788565618" />
+      <entry key="D1" value="88.22354078122576" />
+      <entry key="W1" value="94.84776058934938" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.9075191553171609" />
+      <entry key="MS500" value="0.981309015712727" />
+      <entry key="S2" value="1.2503277525959042" />
+      <entry key="S5" value="1.8757630817779511" />
+      <entry key="S10" value="2.323945958508738" />
+      <entry key="S30" value="2.7431528840884996" />
+      <entry key="S60" value="2.8671766241405283" />
+      <entry key="M2" value="2.9324502905104763" />
+      <entry key="M5" value="2.972721793215059" />
+      <entry key="M10" value="3.000145389620037" />
+      <entry key="M15" value="3.154495102640372" />
+      <entry key="M30" value="7.012724111075669" />
+      <entry key="H1" value="30.049548040224334" />
+      <entry key="H2" value="76.66903530707296" />
+      <entry key="H4" value="125.60771093465488" />
+      <entry key="D1" value="191.1137921782958" />
+      <entry key="W1" value="205.4965224863393" />
+    </decayedShown>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:/xampp/php/php.exe" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3IUGror0s9wWhGB6Z4Q1UzRTXhp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Tomcat Server.Tomcat 11.0.25.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/HCM-UTE/LT WEB/HOMEWORK/Bai_tap_04 03_09_2026/Web_Ban_Hang&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunDashboard">
+    <option name="configurationStatuses">
+      <map>
+        <entry key="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
+          <value>
+            <map>
+              <entry key="Tomcat 11.0.25" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 11.0.25" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 11.0.25" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Web_Ban_Hang:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="5007c2a0-4881-4d9f-b2c2-77c2586aef47" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="49214" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="CRUD_Product_OTP:war exploded" />
+          <artifact name="Web_Ban_Hang:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-63390994e64e-intellij.indexing.shared.core-IU-262.8665.337" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2ea1f7d5-595c-46e6-af16-03ad69684c99" name="Changes" comment="" />
+      <created>1787811937378</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1787811937378</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

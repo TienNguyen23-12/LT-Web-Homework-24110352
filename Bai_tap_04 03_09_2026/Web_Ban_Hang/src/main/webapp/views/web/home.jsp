@@ -1,4 +1,4 @@
-﻿<%--
+<%--
   Created by IntelliJ IDEA.
   User: Thanh Tien
   Date: 27/08/2026
@@ -7,11 +7,13 @@
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Trang Chủ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-light">
 <div class="container mt-4">
     <h2 class="fw-bold mb-4 border-bottom pb-2">10 Sản Phẩm Mới Nhất</h2>
     <div class="row">

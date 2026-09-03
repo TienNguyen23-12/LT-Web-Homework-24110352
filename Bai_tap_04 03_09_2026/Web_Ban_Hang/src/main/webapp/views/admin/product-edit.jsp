@@ -1,4 +1,4 @@
-﻿<%--
+<%--
   Created by IntelliJ IDEA.
   User: Thanh Tien
   Date: 27/08/2026
@@ -7,11 +7,23 @@
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Sửa sản phẩm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .page-header { margin-bottom: 20px; }
+        .page-header h2 { color: #dc3545; font-weight: 500; }
+        .page-header p { color: #6c757d; }
+        .card-header { background-color: #f4f4f4; font-weight: 500; }
+        .current-image { width: 150px; border-radius: 4px; padding: 5px; border: 1px solid #dee2e6; margin-bottom: 10px; }
+    </style>
 </head>
-<body>
+<body class="bg-light">
+
+
 <div class="container mt-4 mb-5">
     <div class="page-header">
         <h2>Sửa sản phẩm</h2>
@@ -23,7 +35,7 @@
             Thông tin sản phẩm
         </div>
         <div class="card-body">
-            <form class="needs-validation" novalidate action="<c:url value='/admin/product/update'/>" method="post" enctype="multipart/form-data">
+            <form action="<c:url value='/admin/product/update'/>" method="post" enctype="multipart/form-data">
                 <input type="hidden" name="productId" value="${p.productId}">
                 <div class="mb-3">
                     <label class="form-label">Tên sản phẩm</label>
@@ -62,7 +74,5 @@
         </div>
     </div>
 </div>
-
-
 </body>
 </html>

@@ -36,14 +36,14 @@ public class CategoryController extends HttpServlet {
             req.setAttribute("totalPages", totalPages);
             req.setAttribute("currentSize", pageSize);
             req.setAttribute("keyword", keyword);
-            req.getRequestDispatcher("/views/admin/category-list.jsp").forward(req, resp);
+            req.getRequestDispatcher("/views/admin/category-list.jsp").include(req, resp);
         } else if (url.contains("/admin/category/add")) {
-            req.getRequestDispatcher("/views/admin/category-add.jsp").forward(req, resp);
+            req.getRequestDispatcher("/views/admin/category-add.jsp").include(req, resp);
         } else if (url.contains("/admin/category/edit")) {
             int id = Integer.parseInt(req.getParameter("id"));
             Category c = categoryService.findById(id);
             req.setAttribute("c", c);
-            req.getRequestDispatcher("/views/admin/category-edit.jsp").forward(req, resp);
+            req.getRequestDispatcher("/views/admin/category-edit.jsp").include(req, resp);
         } else if (url.contains("/admin/category/delete")) {
             try {
                 int id = Integer.parseInt(req.getParameter("id"));

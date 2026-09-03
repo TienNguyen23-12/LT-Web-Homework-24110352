@@ -15,12 +15,11 @@ public class HomeController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("text/html; charset=UTF-8");
         String url = req.getRequestURI();
 
         if (url.contains("/home")) {
             req.setAttribute("top10", productService.findTop10Newest());
-            req.getRequestDispatcher("/views/web/home.jsp").forward(req, resp);
+            req.getRequestDispatcher("/views/web/home.jsp").include(req, resp);
         }
         else if (url.endsWith("/product")) {
             int page = 0;
@@ -37,12 +36,12 @@ public class HomeController extends HttpServlet {
             req.setAttribute("currentPage", page);
             req.setAttribute("totalPages", totalPages);
             req.setAttribute("keyword", keyword);
-            req.getRequestDispatcher("/views/web/product.jsp").forward(req, resp);
+            req.getRequestDispatcher("/views/web/product.jsp").include(req, resp);
         }
         else if (url.contains("/product/detail")) {
             int id = Integer.parseInt(req.getParameter("id"));
             req.setAttribute("p", productService.findById(id));
-            req.getRequestDispatcher("/views/web/detail.jsp").forward(req, resp);
+            req.getRequestDispatcher("/views/web/detail.jsp").include(req, resp);
         }
     }
 }

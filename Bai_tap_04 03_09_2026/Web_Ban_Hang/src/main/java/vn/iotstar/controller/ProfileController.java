@@ -14,64 +14,91 @@ import vn.iotstar.utils.Constants;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Paths;
 
-@WebServlet(urlPatterns = {"/profile", "/profile/update"})
-@MultipartConfig(fileSizeThreshold = 1024 * 1024, maxFileSize = 1024 * 1024 * 5, maxRequestSize = 1024 * 1024 * 5 * 5)
+@WebServlet(urlPatterns = "/profile")
+@MultipartConfig(
+    fileSizeThreshold = 1024 * 1024 * 2,
+    maxFileSize = 1024 * 1024 * 10,
+    maxRequestSize = 1024 * 1024 * 50
+)
 public class ProfileController extends HttpServlet {
-
     private IUserService userService = new UserServiceImpl();
-
-    private String getFileName(Part part) {
-        for (String content : part.getHeader("content-disposition").split(";")) {
-            if (content.trim().startsWith("filename")) {
-                return content.substring(content.indexOf("=") + 2, content.length() - 1);
-            }
-        }
-        return "default.jpg";
-    }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        User user = (User) req.getSession().getAttribute("user");
-        if (user == null) {
+        User sessionUser = (User) req.getSession().getAttribute("user");
+        if (sessionUser == null) {
             resp.sendRedirect(req.getContextPath() + "/login");
             return;
         }
-        req.getRequestDispatcher("/views/web/profile.jsp").forward(req, resp);
+
+        User user = userService.findByEmail(sessionUser.getEmail());
+        if (user != null) {
+            req.getSession().setAttribute("user", user);
+            req.setAttribute("user", user);
+        } else {
+            req.setAttribute("user", sessionUser);
+        }
+
+        req.getRequestDispatcher("/views/web/profile.jsp").include(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        User user = (User) req.getSession().getAttribute("user");
-        if (user == null) {
+        req.setCharacterEncoding("UTF-8");
+        resp.setCharacterEncoding("UTF-8");
+
+        User sessionUser = (User) req.getSession().getAttribute("user");
+        if (sessionUser == null) {
             resp.sendRedirect(req.getContextPath() + "/login");
             return;
         }
 
-        req.setCharacterEncoding("UTF-8");
+        User user = userService.findByEmail(sessionUser.getEmail());
+        if (user == null) {
+            user = sessionUser;
+        }
+
         String fullname = req.getParameter("fullname");
         String phone = req.getParameter("phone");
 
         user.setFullname(fullname);
         user.setPhone(phone);
 
-        String uploadPath = Constants.DIR;
-        File uploadDir = new File(uploadPath);
-        if (!uploadDir.exists()) {
-            uploadDir.mkdir();
+        try {
+            Part part = req.getPart("imageFile");
+            if (part != null && part.getSize() > 0) {
+                String submittedFileName = Paths.get(part.getSubmittedFileName()).getFileName().toString();
+                String ext = "";
+                int idx = submittedFileName.lastIndexOf('.');
+                if (idx > 0) {
+                    ext = submittedFileName.substring(idx);
+                }
+                String newFileName = System.currentTimeMillis() + ext;
+
+                File uploadDir = new File(Constants.DIR);
+                if (!uploadDir.exists()) {
+                    uploadDir.mkdirs();
+                }
+
+                part.write(Constants.DIR + File.separator + newFileName);
+                user.setImages(newFileName);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
-        Part part = req.getPart("images");
-        if (part != null && part.getSize() > 0) {
-            String fileName = System.currentTimeMillis() + "_" + getFileName(part);
-            part.write(uploadPath + File.separator + fileName);
-            user.setImages(fileName);
+        try {
+            userService.updateProfile(user);
+            req.getSession().setAttribute("user", user);
+            req.setAttribute("user", user);
+            req.setAttribute("message", "Cập nhật thông tin thành công!");
+        } catch (Exception e) {
+            e.printStackTrace();
+            req.setAttribute("error", "Cập nhật thất bại: " + e.getMessage());
         }
 
-        userService.updateProfile(user);
-        req.getSession().setAttribute("user", user); // Update session with new info
-        
-        req.setAttribute("message", "Cập nhật thông tin cá nhân thành công!");
-        req.getRequestDispatcher("/views/web/profile.jsp").forward(req, resp);
+        req.getRequestDispatcher("/views/web/profile.jsp").include(req, resp);
     }
 }

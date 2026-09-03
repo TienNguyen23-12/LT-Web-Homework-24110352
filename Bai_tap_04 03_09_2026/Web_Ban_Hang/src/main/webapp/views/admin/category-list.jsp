@@ -1,4 +1,4 @@
-﻿<%--
+<%--
   Created by IntelliJ IDEA.
   User: Thanh Tien
   Date: 28/08/2026
@@ -7,11 +7,22 @@
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Quản lý danh mục</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .page-header { margin-bottom: 20px; }
+        .page-header h2 { color: #dc3545; font-weight: 500; }
+        .page-header p { color: #6c757d; }
+        .card-header { background-color: #f4f4f4; font-weight: 500; }
+    </style>
 </head>
-<body>
+<body class="bg-light">
+
+
 <div class="container mt-4 mb-5">
     <div class="page-header">
         <h2>Quản lý danh mục</h2>
@@ -112,7 +123,5 @@
         </div>
     </div>
 </div>
-
-
 </body>
 </html>

@@ -19,17 +19,17 @@ public class User implements Serializable {
 
     private String fullname;
 
-    @Column(name = "phone", length = 15)
-    private String phone;
-
-    @Column(name = "images")
-    private String images;
-
     @Column(name = "is_active")
     private boolean isActive = false;
 
     @Column(name = "otp_code")
     private String otpCode;
+
+    @Column(name = "phone", length = 20)
+    private String phone;
+
+    @Column(name = "images")
+    private String images;
 
     public User() {}
 
@@ -63,6 +63,20 @@ public class User implements Serializable {
     public void setFullname(String fullname) {
         this.fullname = fullname;
     }
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public void setActive(boolean active) {
+        isActive = active;
+    }
+    public String getOtpCode() {
+        return otpCode;
+    }
+
+    public void setOtpCode(String otpCode) {
+        this.otpCode = otpCode;
+    }
 
     public String getPhone() {
         return phone;
@@ -78,20 +92,5 @@ public class User implements Serializable {
 
     public void setImages(String images) {
         this.images = images;
-    }
-
-    public boolean isActive() {
-        return isActive;
-    }
-
-    public void setActive(boolean active) {
-        isActive = active;
-    }
-    public String getOtpCode() {
-        return otpCode;
-    }
-
-    public void setOtpCode(String otpCode) {
-        this.otpCode = otpCode;
     }
 }

@@ -16,10 +16,11 @@ public class DataSeederListener implements ServletContextListener {
 
     @Override
     public void contextInitialized(ServletContextEvent sce) {
-        EntityManager enma = JpaConfig.getEntityManager();
-        EntityTransaction trans = enma.getTransaction();
-        
+        EntityManager enma = null;
+        EntityTransaction trans = null;
         try {
+            enma = JpaConfig.getEntityManager();
+            trans = enma.getTransaction();
             trans.begin();
             
             // 1. Fake User Admin
@@ -60,11 +61,15 @@ public class DataSeederListener implements ServletContextListener {
             }
 
             trans.commit();
-        } catch (Exception e) {
-            trans.rollback();
+        } catch (Throwable e) {
+            if (trans != null && trans.isActive()) {
+                trans.rollback();
+            }
             e.printStackTrace();
         } finally {
-            enma.close();
+            if (enma != null && enma.isOpen()) {
+                enma.close();
+            }
         }
     }
 

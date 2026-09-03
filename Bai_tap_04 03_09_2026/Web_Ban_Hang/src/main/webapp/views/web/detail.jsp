@@ -1,4 +1,4 @@
-﻿<%--
+<%--
   Created by IntelliJ IDEA.
   User: Thanh Tien
   Date: 27/08/2026
@@ -7,15 +7,15 @@
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
-
-
-
-
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Chi tiết sản phẩm</title>
+    <title>Chi tiết: ${p.productName}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-light">
+
+
 <div class="container mt-5">
     <div class="card shadow-sm border-0">
         <div class="card-body p-5">
@@ -37,7 +37,5 @@
         </div>
     </div>
 </div>
-
-
 </body>
 </html>
