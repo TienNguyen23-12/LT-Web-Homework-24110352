@@ -1,51 +1,77 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Thanh Tien
-  Date: 28/08/2026
-  Time: 8:23 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
-<!DOCTYPE html>
-<html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>Sửa danh mục</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .page-header { margin-bottom: 20px; }
-        .page-header h2 { color: #dc3545; font-weight: 500; }
-        .page-header p { color: #6c757d; }
-        .card-header { background-color: #f4f4f4; font-weight: 500; }
-    </style>
+    <title>Cập Nhật Danh Mục</title>
 </head>
-<body class="bg-light">
-
-
-<div class="container mt-4 mb-5">
-    <div class="page-header">
-        <h2>Sửa danh mục</h2>
-        <p>Cập nhật thông tin danh mục</p>
+<body>
+    <div class="mb-4">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-2">
+                <li class="breadcrumb-item"><a href="<c:url value='/admin/categories'/>" class="text-decoration-none">QL Danh Mục</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Sửa danh mục</li>
+            </ol>
+        </nav>
+        <h3 class="fw-bold text-dark mb-1">Cập Nhật Danh Mục</h3>
+        <p class="text-muted small">Chỉnh sửa thông tin phân loại danh mục #${c.categoryId}</p>
     </div>
 
-    <div class="card shadow-sm">
-        <div class="card-header">
-            Thông tin danh mục
-        </div>
-        <div class="card-body">
-            <form action="<c:url value='/admin/category/update'/>" method="post">
-                <input type="hidden" name="categoryId" value="${c.categoryId}">
-                <div class="mb-4">
-                    <label class="form-label">Tên danh mục</label>
-                    <input type="text" name="categoryname" value="${c.categoryname}" class="form-control" required>
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-white py-3 d-flex align-items-center">
+                    <i class="bi bi-pencil-square text-primary fs-5 me-2"></i>
+                    <span class="fw-bold">Thông tin danh mục #${c.categoryId}</span>
                 </div>
-                <button type="submit" class="btn btn-primary">Cập nhật</button>
-                <button type="reset" class="btn btn-warning text-white">Reset</button>
-                <a href="<c:url value='/admin/categories'/>" class="btn btn-secondary">Hủy</a>
-            </form>
+                <div class="card-body p-4">
+                    <c:if test="${not empty error}">
+                        <div class="alert alert-danger alert-dismissible fade show d-flex align-items-center" role="alert">
+                            <i class="bi bi-exclamation-triangle-fill fs-5 me-2"></i>
+                            <div>${error}</div>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        </div>
+                    </c:if>
+
+                    <form action="<c:url value='/admin/category/update'/>" method="post" class="needs-validation" novalidate>
+                        <input type="hidden" name="categoryId" value="${c.categoryId}">
+
+                        <div class="mb-3">
+                            <label class="form-label text-muted small fw-semibold">Mã danh mục (ID)</label>
+                            <input type="text" class="form-control bg-light" value="${c.categoryId}" readonly disabled>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="categoryname" class="form-label fw-semibold">
+                                Tên danh mục <span class="text-danger">*</span>
+                            </label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text bg-light"><i class="bi bi-tag"></i></span>
+                                <input type="text" 
+                                       id="categoryname" 
+                                       name="categoryname" 
+                                       value="${c.categoryname}" 
+                                       class="form-control" 
+                                       required 
+                                       minlength="2" 
+                                       maxlength="100">
+                                <div class="invalid-feedback">
+                                    Tên danh mục không được để trống và phải có từ 2 đến 100 ký tự.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-2 pt-2 border-top">
+                            <button type="submit" class="btn btn-primary px-4 fw-semibold shadow-sm">
+                                <i class="bi bi-save me-1"></i>Cập Nhật Danh Mục
+                            </button>
+                            <a href="<c:url value='/admin/categories'/>" class="btn btn-outline-secondary ms-auto">
+                                <i class="bi bi-x-lg me-1"></i>Hủy bỏ
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 </body>
-</html>

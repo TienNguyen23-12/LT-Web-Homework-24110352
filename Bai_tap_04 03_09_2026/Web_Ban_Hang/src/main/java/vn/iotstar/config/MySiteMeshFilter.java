@@ -43,6 +43,8 @@ public class MySiteMeshFilter extends ConfigurableSiteMeshFilter {
                .addExcludedPath("/forgot-password*")
                .addExcludedPath("/reset-password*")
                .addExcludedPath("/image*")
+               .addExcludedPath("/upload*")
+               .addExcludedPath("/assets/*")
                .addExcludedPath("/views/*");
 
         return new SiteMeshFilter(builder.getSelector(), builder.getContentProcessor(),
